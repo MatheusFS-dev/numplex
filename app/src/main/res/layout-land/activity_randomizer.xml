@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    app:contentScaleClosed="1.0"
+    app:contentScaleOpen="0.9"
+    app:marginFactor="0.7"
+    tools:context=".randomizer.RandomizerActivity">
+
+    <!-- This part is the menu -->
+    <include layout="@layout/layout_drawer" />
+
+    <!-- Content here -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        android:orientation="vertical"
+        android:tag="content">
+
+        <!-- Toolbar -->
+        <include layout="@layout/layout_toolbar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/ripple_effect_blue"
+            android:fontFamily="@font/numplex_font"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/generate"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:baselineAligned="false">
+
+            <!-- Count -->
+            <LinearLayout
+                android:id="@+id/countGroups"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/ripple_effect_black"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/ripple_effect_blue"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add_group"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/numplex_font"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="@string/groups"
+                    android:textColor="@color/text_color"
+                    android:textSize="25sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/groups"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/ripple_effect_black"
+                        android:gravity="end|center"
+                        android:hint="2"
+                        android:imeOptions="actionDone"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="20dp"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="25sp"
+                        tools:ignore="HardcodedText" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/resultContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ripple_effect_black"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:text="@string/see_result"
+                        android:paddingStart="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="center"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/numplex_font"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="28sp"
+                        tools:ignore="Autofill,LabelFor,RtlCompat,RtlHardcoded,RtlSymmetry,TextFields" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:animateLayoutChanges="true"
+            android:focusable="false"
+            android:fontFamily="@font/numplex_font"
+            android:padding="10dp"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <!-- This part is the list -->
+        <include
+            android:id="@+id/listMaster"
+            layout="@layout/layout_list_flotting_button" />
+
+        <!-- This part is the number generator -->
+        <include
+            android:id="@+id/numberMaster"
+            layout="@layout/layout_number_generator"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

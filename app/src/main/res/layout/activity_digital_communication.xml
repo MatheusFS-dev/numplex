@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:marginFactor="0.7"
+    app:contentScaleClosed="1.0"
+    app:contentScaleOpen="0.9"
+    android:background="@color/main_background_color"
+    tools:context=".resistor.ResistorActivity">
+
+    <!-- This part is the menu -->
+    <include layout="@layout/layout_drawer" />
+
+    <!-- Content here -->
+    <ScrollView
+        android:tag="content"
+        android:id="@+id/content"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:background="@color/main_background_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Toolbar -->
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Content -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <!-- This part is the list -->
+                <include layout="@layout/layout_list_flotting_button_dig_com"
+                    android:id="@+id/listMaster"/>
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="@string/symbols_probabilities"
+                    android:textColor="@color/numplex_blue"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/symbols_probabilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:hint="S1,S2,S3..."
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_all_radius_stroke_15"
+                    android:backgroundTint="@color/numplex_blue"
+                    android:textSize="22sp"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/numplex_font"
+                    android:textColorHint="@color/grey"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    tools:ignore="HardcodedText,LabelFor" />
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="@string/noise_power"
+                    android:textColor="@color/numplex_blue"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/noise_power"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_all_radius_stroke_15"
+                    android:backgroundTint="@color/numplex_blue"
+                    android:textSize="22sp"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/numplex_font"
+                    android:textColorHint="@color/grey"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/serversBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/viewParent.headerText.settingsMiniTitle"
+                        android:text="@string/number_servers"
+                        android:textColor="@color/numplex_blue"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/servers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/bg_all_radius_stroke_15"
+                        android:backgroundTint="@color/numplex_blue"
+                        android:textSize="22sp"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/numplex_font"
+                        android:textColorHint="@color/grey"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/jBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/viewParent.headerText.settingsMiniTitle"
+                        android:text="@string/number_of_elements_in_queue"
+                        android:textColor="@color/numplex_blue"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/j"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/bg_all_radius_stroke_15"
+                        android:backgroundTint="@color/numplex_blue"
+                        android:textSize="22sp"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/numplex_font"
+                        android:textColorHint="@color/grey"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/kBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/viewParent.headerText.settingsMiniTitle"
+                        android:text="@string/total_elements_in_queue"
+                        android:textColor="@color/numplex_blue"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/k"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/bg_all_radius_stroke_15"
+                        android:backgroundTint="@color/numplex_blue"
+                        android:textSize="22sp"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/numplex_font"
+                        android:textColorHint="@color/grey"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/sBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/viewParent.headerText.settingsMiniTitle"
+                        android:text="@string/population_size"
+                        android:textColor="@color/numplex_blue"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/s"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/bg_all_radius_stroke_15"
+                        android:backgroundTint="@color/numplex_blue"
+                        android:textSize="22sp"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/numplex_font"
+                        android:textColorHint="@color/grey"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:importantForAutofill="no"
+                        tools:ignore="LabelFor" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="@string/union_bound"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/union_bound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_all_radius_stroke_15"
+                    android:backgroundTint="@color/text_color"
+                    android:textSize="22sp"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/numplex_font"
+                    android:textColorHint="@color/grey"/>
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="@string/origin_distance"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/origin_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_all_radius_stroke_15"
+                    android:backgroundTint="@color/text_color"
+                    android:textSize="22sp"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/numplex_font"
+                    android:textColorHint="@color/grey"/>
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="@string/energies"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/energies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_all_radius_stroke_15"
+                    android:backgroundTint="@color/text_color"
+                    android:textSize="22sp"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/numplex_font"
+                    android:textColorHint="@color/grey"/>
+
+                <TextView
+                    style="@style/viewParent.headerText.settingsMiniTitle"
+                    android:text="@string/distance_between_symbols"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/distance_between_symbols"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_all_radius_stroke_15"
+                    android:backgroundTint="@color/text_color"
+                    android:textSize="22sp"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/numplex_font"
+                    android:textColorHint="@color/grey"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+            <!-- End Content -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

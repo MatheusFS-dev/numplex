@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoMenuView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:tag="menu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="130dp"
+        android:background="@color/secondary_background_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#07ABC8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    tools:ignore="ContentDescription"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="#07ABC8"
+                    android:padding="10dp"
+                    android:src="@drawable/png_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#07ABC8"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        tools:ignore="RtlSymmetry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#07ABC8"
+                        android:paddingStart="5dp"
+                        android:text="@string/app_name"
+                        android:textColor="#F6F6F6"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        tools:ignore="RtlSymmetry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#07ABC8"
+                        android:gravity="start"
+                        android:paddingStart="5dp"
+                        android:text="@string/by_exoticnumbers"
+                        android:textColor="#F6F6F6"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--code for wave animation-->
+            <com.scwang.wave.MultiWaveHeader
+                android:id="@+id/waveHeader"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:scaleY="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:mwhCloseColor="#07ABC8"
+                app:mwhColorAlpha="0.8"
+                app:mwhGradientAngle="360"
+                app:mwhProgress="1"
+                app:mwhStartColor="#07ABC8"
+                app:mwhVelocity="0.6"
+                app:mwhWaveHeight="50dp"
+                app:mwhWaves="MultiWave" />
+
+            <!--The menu-->
+            <TextView
+                android:id="@+id/home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_home_24" />
+
+            <TextView
+                android:id="@+id/calculator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/calculator"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_calculator" />
+
+            <TextView
+                android:id="@+id/algebra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/vector_calculator"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_arrow" />
+
+            <TextView
+                android:id="@+id/matrix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/matrix_calculator"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_matrix" />
+
+            <TextView
+                android:id="@+id/matrixComplex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home_matrix_complex"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_complex_matrix" />
+
+            <TextView
+                android:id="@+id/boole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home_boolean"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_boolean" />
+
+            <TextView
+                android:id="@+id/digital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/numeric_base_converter"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_conversion_24" />
+
+            <TextView
+                android:id="@+id/impCalc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home_complex"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_home_complex" />
+
+            <TextView
+                android:id="@+id/mmc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/mmc_mdc"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_fraction" />
+
+            <TextView
+                android:id="@+id/series"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home_series"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_series" />
+
+            <TextView
+                android:id="@+id/resistor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/resistor_color_code"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_resistor" />
+
+            <TextView
+                android:id="@+id/randomizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/group_randomizer"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_groups" />
+
+            <TextView
+                android:id="@+id/distribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/distribution"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_dices" />
+
+            <TextView
+                android:id="@+id/kmap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home_karnaugh"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_kmap" />
+
+            <TextView
+                android:id="@+id/network"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/home_network"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_network" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/partial_fractions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/partial_fractions"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_partial_fractions" />
+
+            <TextView
+                android:id="@+id/queue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/queue"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_queue" />
+
+            <TextView
+                android:id="@+id/dig_com"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/digital_communication"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_dig_com" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_textview_drawer_others"
+                android:clickable="false"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/others"
+                android:textColor="@color/grey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/settings"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_settings_24" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/about"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_info_24" />
+
+            <TextView
+                android:id="@+id/report_bug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/report_a_bug"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_bug_report_24" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/share_app"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_share_24" />
+
+            <TextView
+                android:id="@+id/rateus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ripple_effect_secondary_background"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:layout_marginBottom="50dp"
+                android:text="@string/rate_us"
+                android:textColor="@color/icons"
+                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_baseline_star_border_24" />
+        </LinearLayout>
+    </ScrollView>
+</nl.psdcompany.duonavigationdrawer.views.DuoMenuView>

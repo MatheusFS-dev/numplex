@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#F3B0AA">
+    <item>
+        <vector android:height="24dp" android:viewportHeight="100"
+            android:viewportWidth="100" android:width="24dp">
+            <path android:fillColor="#48B37B" android:pathData="M50,50m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+            <path android:fillColor="#FFFFFF" android:pathData="M44.6,72.7L21.2,49.4l7.6,-7.6 15.8,15.9L71.2,31l7.6,7.6z"/>
+        </vector>
+    </item>
+</ripple>

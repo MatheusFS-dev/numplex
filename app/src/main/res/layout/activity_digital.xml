@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:marginFactor="0.7"
+    app:contentScaleClosed="1.0"
+    app:contentScaleOpen="0.9"
+    android:background="@color/main_color"
+    tools:context=".digital.DigitalActivity">
+
+    <!-- This part is the menu -->
+    <include layout="@layout/layout_drawer" />
+
+    <!-- Content here -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:tag="content"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color">
+
+        <!-- Toolbar -->
+        <include layout="@layout/layout_toolbar" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/binaryLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/bin"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_textview_on"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:text="BIN"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/binary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:textColorHighlight="@color/main_background_color"
+                android:textIsSelectable="false"
+                android:textSelectHandle="@drawable/selected_text"
+                android:background="@drawable/bg_textview_corners_right"
+                android:hint="@string/binary"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="30sp"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/decimalLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/binaryLinear">
+
+            <TextView
+                android:id="@+id/dec"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_textview_on"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:text="DEC"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/decimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:textColorHighlight="@color/main_background_color"
+                android:textIsSelectable="false"
+                android:textSelectHandle="@drawable/selected_text"
+                android:background="@drawable/bg_textview_corners_right"
+                android:hint="@string/decimal"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="30sp"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/octaLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/decimalLinear">
+
+            <TextView
+                android:id="@+id/octa"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_textview_on"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="25sp"
+                android:text="OCTA"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/octal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:textColorHighlight="@color/main_background_color"
+                android:textIsSelectable="false"
+                android:textSelectHandle="@drawable/selected_text"
+                android:background="@drawable/bg_textview_corners_right"
+                android:hint="@string/octal"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="30sp"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/hexaLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/octaLinear">
+
+            <TextView
+                android:id="@+id/hexa"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_textview_on"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="25sp"
+                android:text="HEXA"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/hexadecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:textColorHighlight="@color/main_background_color"
+                android:textIsSelectable="false"
+                android:textSelectHandle="@drawable/selected_text"
+                android:background="@drawable/bg_textview_corners_right"
+                android:hint="@string/hexadecimal"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:textSize="30sp"
+                tools:ignore="Autofill,LabelFor,TextFields" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include layout="@layout/layout_keyboard_digital"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hexaLinear"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

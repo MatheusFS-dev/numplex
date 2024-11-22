@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/copyExpression"
+        android:title="@string/copy_expression" />
+    <item
+        android:id="@+id/copyResult"
+        android:title="@string/copy_result" />
+    <item
+        android:id="@+id/delete"
+        android:title="@string/delete" />
+</menu>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="0dp"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="1"
+    android:background="@color/secondary_background_color"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:id="@+id/nav"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_secondary_background"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_round_menu_12"
+            tools:ignore="ContentDescription,NestedWeights" />
+
+        <ImageButton
+            android:id="@+id/help"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_secondary_background"
+            android:onClick="buttonPressed"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_help_outline_24"
+            tools:ignore="ContentDescription,NestedWeights,UsingOnClickInXml" />
+
+        <ImageButton
+            android:id="@+id/history"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_secondary_background"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_history_24"
+            tools:ignore="ContentDescription,NestedWeights" />
+
+        <ImageButton
+            android:id="@+id/zoomout"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_secondary_background"
+            android:onClick="buttonPressed"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_zoom_out_24"
+            tools:ignore="ContentDescription,NestedWeights,UsingOnClickInXml" />
+
+        <ImageButton
+            android:id="@+id/zoomin"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_secondary_background"
+            android:onClick="buttonPressed"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_zoom_in_24"
+            tools:ignore="ContentDescription,NestedWeights,UsingOnClickInXml" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/unit"
+            android:layout_width="15dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_stroke"
+            android:fontFamily="@font/numplex_font"
+            android:onClick="buttonPressed"
+            android:text="Deg"
+            android:textColor="@color/icons"
+            android:textSize="13sp"
+            tools:ignore="HardcodedText,SmallSp,UsingOnClickInXml" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/frequency"
+            android:layout_width="15dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_stroke"
+            android:fontFamily="@font/numplex_font"
+            android:onClick="buttonPressed"
+            android:text="f"
+            android:textAllCaps="false"
+            android:textColor="@color/icons"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,UsingOnClickInXml" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="0.5"
+        tools:ignore="NestedWeights">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/openingParentheses"
+            style="@style/CalculatorButtonBorderless"
+            android:text="("
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/closingParentheses"
+            style="@style/CalculatorButtonBorderless"
+            android:text=")"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/left"
+            style="@style/CalculatorButtonBorderless"
+            android:text="\u1438"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/right"
+            style="@style/CalculatorButtonBorderless"
+            android:text="\u1433"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/comma"
+            style="@style/CalculatorButtonBorderless"
+            android:text=","
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/negative"
+            style="@style/CalculatorButtonBorderless"
+            android:text="+/-"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="0.5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pico"
+            style="@style/CalculatorButtonBlue"
+            android:text="p"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nano"
+            style="@style/CalculatorButtonBlue"
+            android:text="n"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/micro"
+            style="@style/CalculatorButtonBlue"
+            android:text="μ"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mili"
+            style="@style/CalculatorButtonBlue"
+            android:text="m"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/kilo"
+            style="@style/CalculatorButtonBlue"
+            android:text="k"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mega"
+            style="@style/CalculatorButtonBlue"
+            android:text="M"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/giga"
+            style="@style/CalculatorButtonBlue"
+            android:text="G"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pi"
+            style="@style/CalculatorButtonBlue"
+            android:text="@string/pi_symbol"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/division"
+            style="@style/CalculatorButtonBorderless"
+            android:text="÷"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/multiplication"
+            style="@style/CalculatorButtonBorderless"
+            android:text="×"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/polar"
+            style="@style/CalculatorButtonBorderless"
+            android:text="∠"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/AC"
+            style="@style/CalculatorButtonBorderless"
+            android:text="AC"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/del"
+            style="@style/CalculatorButtonBlue"
+            android:text="DEL"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/seven"
+            style="@style/CalculatorButtonBorderless"
+            android:text="7"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eight"
+            style="@style/CalculatorButtonBorderless"
+            android:text="8"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nine"
+            style="@style/CalculatorButtonBorderless"
+            android:text="9"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ind"
+            style="@style/CalculatorButtonBorderless"
+            android:text="Ind"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subtraction"
+            style="@style/CalculatorButtonBlue"
+            android:text="﹣"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/four"
+            style="@style/CalculatorButtonBorderless"
+            android:text="4"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/five"
+            style="@style/CalculatorButtonBorderless"
+            android:text="5"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/six"
+            style="@style/CalculatorButtonBorderless"
+            android:text="6"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cap"
+            style="@style/CalculatorButtonBorderless"
+            android:text="Cap"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plus"
+            style="@style/CalculatorButtonBlue"
+            android:text="+"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/one"
+            style="@style/CalculatorButtonBorderless"
+            android:text="1"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/two"
+            style="@style/CalculatorButtonBorderless"
+            android:text="2"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/three"
+            style="@style/CalculatorButtonBorderless"
+            android:text="3"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/i"
+            style="@style/CalculatorButtonBorderless"
+            android:text="i"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/parallel"
+            style="@style/CalculatorButtonBlue"
+            android:text="‖"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        tools:ignore="TooManyViews">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zero"
+            style="@style/CalculatorButtonBorderless"
+            android:text="0"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/point"
+            style="@style/CalculatorButtonBorderless"
+            android:text="."
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/E"
+            style="@style/CalculatorButtonBorderless"
+            android:text="Exp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ans"
+            style="@style/CalculatorButtonBorderless"
+            android:text="Ans"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/equals"
+            style="@style/CalculatorButtonBlue"
+            android:text="="
+            android:onClick="equals"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

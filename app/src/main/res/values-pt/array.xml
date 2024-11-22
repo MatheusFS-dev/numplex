@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="table_header">
+        <item>Endereço de sub-rede</item>
+        <item>Faixa de endereços</item>
+        <item>IPs utilizáveis</item>
+        <item>Hosts</item>
+    </string-array>
+
+    <string-array name="ohm_array">
+        <item>Ω</item>
+        <item>kΩ</item>
+        <item>MΩ</item>
+        <item>GΩ</item>
+    </string-array>
+
+    <string-array name="distribution">
+        <item>Uniforme</item>
+        <item>Gaussiana</item>
+        <item>Rayleigh</item>
+        <item>Rician</item>
+    </string-array>
+
+    <string-array name="eia_array">
+        <item>EIA - 3 dígitos</item>
+        <item>EIA - 4 dígitos</item>
+        <item>EIA - 96</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>Dispositivo</item>
+        <item>English</item>
+        <item>Português</item>
+    </string-array>
+
+    <string-array name="algebra_array">
+        <item>Adição</item>
+        <item>Subtração</item>
+        <item>Ângulo</item>
+        <item>Módulo</item>
+        <item>Produto escalar</item>
+        <item>Produto vetorial</item>
+        <item>Distância entre ponto e reta</item>
+        <item>Distância entre retas</item>
+        <item>Distância entre ponto e plano</item>
+        <item>Distância entre planos</item>
+        <item>Distância entre reta e plano</item>
+        <item>Ângulo entre reta e plano</item>
+        <item>Ângulo entre planos</item>
+        <item>Ângulo entre retas</item>
+        <item>Coordenadas do vetor</item>
+        <item>Vetores paralelos</item>
+        <item>Vetores perpendiculares</item>
+        <item>Projeção de vetores</item>
+    </string-array>
+
+    <string-array name="matrix_array">
+        <item>Adição</item>
+        <item>Subtração</item>
+        <item>Multiplicação de matrizes</item>
+        <item>Potenciação de matrizes</item>
+        <item>Multiplicação por escalar</item>
+        <item>Determinante</item>
+        <item>Transposta</item>
+        <item>Inversa</item>
+        <item>Divisão por escalar</item>
+        <item>Divisão de matrizes</item>
+    </string-array>
+
+    <string-array name="complex_matrix_array">
+        <item>Adição</item>
+        <item>Subtração</item>
+        <item>Multiplicação de matrizes</item>
+        <item>Potenciação de matrizes</item>
+        <item>Multiplicação por escalar</item>
+        <item>Determinante</item>
+        <item>Transposta</item>
+        <item>Inversa</item>
+        <item>Divisão de matrizes</item>
+        <item>Conjugado</item>
+        <item>Adjunta</item>
+        <item>Produto tensorial</item>
+        <item>Divisão por escalar</item>
+    </string-array>
+
+    <string-array name="algebra_element_array">
+        <item>Vetor</item>
+        <item>Ponto</item>
+        <item>Reta</item>
+        <item>Plano</item>
+    </string-array>
+
+    <string-array name="digital_com_element_array">
+        <item>Ponto</item>
+    </string-array>
+
+    <string-array name="categories_array">
+        <item>Matemática</item>
+        <item>Álgebra</item>
+        <item>Conversores</item>
+        <item>Eletrônica</item>
+        <item>Outros</item>
+    </string-array>
+</resources>

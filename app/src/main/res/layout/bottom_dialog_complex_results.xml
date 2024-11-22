@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/bg_bottom_dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="1dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/unit2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="DEG"
+                android:layout_marginStart="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginBottom="15dp"
+                android:textColor="@android:color/transparent"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:clickable="false"
+                android:focusable="false"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/result_formats"
+                android:fontFamily="@font/numplex_font"
+                android:layout_weight="3"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/numplex_blue"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="DEG"
+                android:layout_marginEnd="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/ripple_effect_main_background"
+                android:textColor="@color/text_color_settings"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scientific_notation"
+            android:fontFamily="@font/numplex_font"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_complex_result_textview"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewScientific"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_textview_border_bottom"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyScientific"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_complex_result_textview"
+            android:text="@string/engineer_notation"
+            android:fontFamily="@font/numplex_font"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewEngineer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_textview_border_bottom"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyEngineer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/polar_form"
+            android:fontFamily="@font/numplex_font"
+            android:background="@drawable/bg_complex_result_textview"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewPolar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_textview_border_bottom"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyPolar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trigonometric_form"
+            android:fontFamily="@font/numplex_font"
+            android:background="@drawable/bg_complex_result_textview"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewTrigonometric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_textview_border_bottom"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyTrigonometric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exponential_form"
+            android:fontFamily="@font/numplex_font"
+            android:background="@drawable/bg_complex_result_textview"
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewExponential"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/numplex_font"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_textview_border_bottom"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyExponential"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/admittance"
+            android:fontFamily="@font/numplex_font"
+            android:background="@drawable/bg_complex_result_textview"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewAdmittance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/numplex_font"
+                android:background="@drawable/bg_textview_border_bottom"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyAdmittance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/big_decimal_number"
+            android:fontFamily="@font/numplex_font"
+            android:background="@drawable/bg_complex_result_textview"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewBig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/numplex_font"
+            android:background="@drawable/bg_textview_border_bottom"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/copyBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_weight="0.1"
+                android:layout_marginEnd="5dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple_effect_grey"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                tools:ignore="ContentDescription,NestedWeights,RtlSymmetry,UsingOnClickInXml" />
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

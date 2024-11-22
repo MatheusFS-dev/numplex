@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="fullUser"
+        android:hardwareAccelerated="true">
+
+        <activity
+            android:name=".digital.DigitalActivity"
+            android:label="Converter"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".application.AboutActivity"
+            android:label="ABOUT"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".calculator.CalculatorActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:configChanges="orientation"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".partial_fractions.PartialFractionActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeBottomSheet"
+            tools:ignore="LockedOrientationActivity">
+        </activity>
+
+        <activity
+            android:name=".complex_calculator.ComplexCalculatorActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:configChanges="orientation"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".application.SettingsActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity">
+        </activity>
+
+        <activity
+            android:name=".resistor.ResistorActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".karnaugh.KarnaughActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".network.NetworkActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppThemeBottomSheet"
+            tools:ignore="LockedOrientationActivity">
+        </activity>
+
+        <activity
+            android:name=".queue.QueueActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".digital_communication.DigitalCommunicationActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".algebra.AlgebraActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".randomizer.RandomizerActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".distributions.DistributionsActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".series.SeriesActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".booleanSimplifier.BooleanActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullUser"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".matrix.MatrixActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+        <activity
+            android:name=".matrix_complex.MatrixComplexActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppThemeBottomSheet">
+        </activity>
+
+
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".mmc_mdc.MMC_MDC_Activity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity
+            android:name=".application.SplashActivity"
+            android:theme="@style/Theme.App.Starting"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

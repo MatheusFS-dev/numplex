@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearCalcHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_dialog"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ripple_effect_black"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/numplex_font"
+            android:gravity="center"
+            android:focusable="false"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="Bits:"
+            android:textColor="@color/text_color"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/bits"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/main_color"
+            android:fontFamily="@font/numplex_font"
+            android:hint="0"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/grey"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:focusable="false"
+        android:textStyle="italic|bold"
+        tools:ignore="HardcodedText" />
+
+    <LinearLayout
+        android:id="@+id/one_cpl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ripple_effect_black"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:focusable="false"
+                android:text="@string/_1_s_complement" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/oneScroll"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/one_cpl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/numplex_font"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="30sp" />
+
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/copyOne"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_black"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_content_copy_24"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/two_cpl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ripple_effect_black"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:focusable="false"
+                android:text="@string/_2_s_complement" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/twoScroll"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/two_cpl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/numplex_font"
+                android:background="@drawable/ripple_effect_black"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="30sp" />
+
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/copyTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ripple_effect_black"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_content_copy_24"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+</LinearLayout>

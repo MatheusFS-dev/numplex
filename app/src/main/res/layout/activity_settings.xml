@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings"
+    tools:context=".application.SettingsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dayNight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/day_night"
+        app:lottie_speed="1.0" >
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <!-- Toolbar -->
+    <include layout="@layout/layout_toolbar_no_help" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/theme"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="RtlSymmetry"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/ripple_effect_black">
+
+            <ImageView
+                android:id="@+id/darkModeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_dark_mode"
+                android:scaleType="fitCenter"
+                tools:ignore="ContentDescription"
+                app:tint="@color/reversed_background_color" />
+
+            <TextView
+                android:id="@+id/textDark"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                style="@style/settingsText"
+                android:text="@string/dark_mode"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_color"
+                android:clickable="false" />
+
+            <com.mahfa.dnswitch.DayNightSwitch
+                android:id="@+id/darkModeSwitch"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/language"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="RtlSymmetry"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/ripple_effect_black">
+
+            <ImageView
+                android:id="@+id/languageImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_language"
+                android:scaleType="fitCenter"
+                tools:ignore="ContentDescription"
+                app:tint="@color/reversed_background_color" />
+
+            <TextView
+                android:id="@+id/textLanguage"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                style="@style/settingsText"
+                android:text="@string/language"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_color"
+                android:clickable="false" />
+
+            <LinearLayout
+                android:id="@+id/spinnerContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect_black"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Spinner
+                    android:id="@+id/language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:backgroundTint="@color/grey"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="@string/others"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/credits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/ripple_effect_black">
+
+            <TextView
+                android:id="@+id/credits1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/credits"
+                android:textSize="17sp"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_color"
+                android:clickable="false" />
+
+            <TextView
+                android:id="@+id/credits2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/no_one_clicks_me"
+                android:textSize="15sp"
+                android:paddingTop="3dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_color_settings"
+                android:clickable="false" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

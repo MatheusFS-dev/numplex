@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="table_header">
+        <item>Subnet address</item>
+        <item>Range of addresses</item>
+        <item>Usable IPs</item>
+        <item>Hosts</item>
+    </string-array>
+
+    <string-array name="ohm_array">
+        <item>Ω</item>
+        <item>kΩ</item>
+        <item>MΩ</item>
+        <item>GΩ</item>
+    </string-array>
+
+    <string-array name="distribution">
+        <item>Uniform</item>
+        <item>Gaussian</item>
+        <item>Rayleigh</item>
+        <item>Rician</item>
+    </string-array>
+
+    <string-array name="eia_array">
+        <item>EIA - 3 digits</item>
+        <item>EIA - 4 digits</item>
+        <item>EIA - 96</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>Device</item>
+        <item>English</item>
+        <item>Português</item>
+    </string-array>
+
+    <string-array name="algebra_array">
+        <item>Addition</item>
+        <item>Subtraction</item>
+        <item>Angle</item>
+        <item>Length</item>
+        <item>Dot product</item>
+        <item>Cross product</item>
+        <item>Distance between point and line</item>
+        <item>Distance between lines</item>
+        <item>Distance between point and plane</item>
+        <item>Distance between planes</item>
+        <item>Distance between line and plane</item>
+        <item>Angle between line and plane</item>
+        <item>Angle between planes</item>
+        <item>Angle between lines</item>
+        <item>Vector coordinates</item>
+        <item>Parallel vectors</item>
+        <item>Perpendicular vectors</item>
+        <item>Vector projection</item>
+    </string-array>
+
+    <string-array name="matrix_array">
+        <item>Addition</item>
+        <item>Subtraction</item>
+        <item>Matrix multiplication</item>
+        <item>Matrix power</item>
+        <item>Scalar multiplication</item>
+        <item>Determinant</item>
+        <item>Transpose</item>
+        <item>Inverse</item>
+        <item>Scalar division</item>
+        <item>Matrix division</item>
+    </string-array>
+
+    <string-array name="complex_matrix_array">
+        <item>Addition</item>
+        <item>Subtraction</item>
+        <item>Matrix multiplication</item>
+        <item>Matrix power</item>
+        <item>Scalar multiplication</item>
+        <item>Determinant</item>
+        <item>Transpose</item>
+        <item>Inverse</item>
+        <item>Matrix Division</item>
+        <item>Conjugate</item>
+        <item>Adjoint</item>
+        <item>Tensor product</item>
+        <item>Scalar division</item>
+    </string-array>
+
+    <string-array name="algebra_element_array">
+        <item>Vector</item>
+        <item>Point</item>
+        <item>Line</item>
+        <item>Plane</item>
+    </string-array>
+
+    <string-array name="digital_com_element_array">
+        <item>Point</item>
+    </string-array>
+
+    <string-array name="categories_array">
+        <item>Mathematics</item>
+        <item>Algebra</item>
+        <item>Converters</item>
+        <item>Electronics</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
+</resources>

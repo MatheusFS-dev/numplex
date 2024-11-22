@@ -1,0 +1,397 @@
+<resources>
+    <string name="app_name">Numplex</string>
+    <string name="pi_symbol">\u03C0</string>
+
+    /* -------------------- Complex calculator help activity -------------------- */
+    <string name="ImpInput">To enter an impedance, type it as a complex number. If you want to enter only the negative real or imaginary part, you cannot use the \"﹣\" button. To insert only one negative part use the \"+/-\" button.\n<b>Example:</b> 2+-3+5i</string>
+    <string name="ImpInputResult">-1.0 + 5.0i</string>
+
+    <string name="complexObs">By default, this calculator will always try to find a complex number rather than separate numbers. To enter values separately, you can either use parenthesis or type the imaginary part first.\n<b>Example:</b> 2+3i﹣4+i ≠ 2+3i﹣(4)+i</string>
+
+    <string name="Polar">To enter the polar form of an impedance type the modulus followed by \"∠\" and the argument, using degrees or radians.\n<b>Example:</b> 10∠90</string>
+    <string name="PolarResult">10i</string>
+
+    <string name="series">To calculate series impedance use the operator \"+\".\n<b>Example:</b> 2+3i + 3+5i</string>
+    <string name="seriesResult">5.0 + 8.0i</string>
+
+    <string name="parallel">To calculate parallel impedance use the operator \"||\".\n<b>Example:</b> 3+3i ‖ 6+6i</string>
+    <string name="parallelResult">2.0 + 2.0i</string>
+
+    <string name="cap"><b>Cap</b> returns the capacitive reactance.\n<b>Example:</b> Cap(10μ, 100)</string>
+    <string name="capResult">-159.1549430918955i</string>
+
+    <string name="ind"><b>Ind</b> returns the inductive reactance.\n<b>Example:</b> Ind(100m, 100)</string>
+    <string name="indResult">62.8318530717958i</string>
+
+    <string name="prefix">You can also use metric prefixes, like m (10<font size="13"><sup>-3</sup></font>). This calculator allows these prefixes:\n● m = 10<font size="13"><sup>-3</sup></font>\n● μ = 10<font size="13"><sup>-6</sup></font>\n● n = 10<font size="13"><sup>-9</sup></font>\n● p = 10<font size="13"><sup>-12</sup></font>\n● k = 10<font size="13"><sup>3</sup></font>\n● M = 10<font size="13"><sup>6</sup></font>\n● G = 10<font size="13"><sup>9</sup></font>\n<b>Example:</b> 10m+2μi</string>
+    <string name="prefixResult">0.01 + 0.000006i</string>
+
+    <string name="format">You can see more result formats by touching on the result text.</string>
+
+    <string name="scientific">You can enter an input using scientific notation by typing \"E\" followed by the exponent.\n<b>Example:</b> 10E-2+3E5i</string>
+    <string name="scientificResult">0.1 + 300000.0i</string>
+
+    <string name="precedence">To apply higher precedence use parentheses.\n<b>Example:</b> ((300 + Cap(10μ,10)) || 200) + 100 </string>
+    <string name="precedenceResult">292.813587011702 – 22.8750630037484i</string>
+
+    <string name="complex">You can also do calculations with complex numbers.\n<b>Example:</b> ((3+3i + 2+2i ﹣ 1+1i) × 2) ÷ 2+2i</string>
+    <string name="complexResult">4.0</string>
+
+    /* ---------------------------- Boolean activity ---------------------------- */
+
+    <string name="not_description">Use the symbol \" \' \" to negate the operator.\n<b>Example:</b> A·A\'</string>
+
+    <string name="and_description">Use the symbol \"·\" as the AND operator.\n<b>Example:</b> B·B</string>
+
+    <string name="or_description">Use the symbol \"+\" as the OR operator.\n<b>Example:</b> A+1</string>
+
+    <string name="xor_description">Use the symbol \"⊕\" as the XOR operator.\n<b>Example:</b> A⊕B</string>
+
+    /* ---------------------------- Series activity ----------------------------- */
+
+    <string name="series_description">To enter a number series, type the elements followed by commas.\n<b>Example:</b> 1, 3/2, 2, 5/2, 3</string>
+    <string name="seriesExample">The sequence is arithmetic with ratio 0.5.\n1 + 0.5·(n - 1)</string>
+
+    /* ----------------------------- About activity ----------------------------- */
+    <string name="app">
+        <font size="22">Numplex\n</font>
+        <font size="15">Product by ExoticNumbers</font>
+    </string>
+
+    <string name="version">
+        <font size="22">Version\n</font>
+        <font size="15">2.0</font>
+    </string>
+
+    <string name="developer"><font size="22">Developers</font></string>
+
+    <string name="Matheus">
+        <font size="22">Matheus Ferreira Silva</font>
+    </string>
+
+    <string name="Forza">
+        <font size="22">Felipe Lorenzo S.S. Forza</font>
+    </string>
+
+    <string name="Alvaro">
+        <font size="22">Álvaro Lúcio Almeida Ribeiro</font>
+    </string>
+
+    <string name="Ewel">
+        <font size="22">Ewel Fernandes Pereira</font>
+    </string>
+
+    <string name="email">
+        <font size="22">Email\n</font>
+        <a href = "mailto:exoticnumbers.feedback@gmail.com?subject = Feedback&amp;body = Message">exoticnumbers.feedback@gmail.com</a>
+    </string>
+
+    /* ---------------------------- Resistor activity --------------------------- */
+    <string name="Black_0">Black\n0</string>
+    <string name="Brown_1">Brown\n1</string>
+    <string name="Red_2">Red\n2</string>
+    <string name="Orange_3">Orange\n3</string>
+    <string name="Yellow_4">Yellow\n4</string>
+    <string name="Green_5">Green\n5</string>
+    <string name="Blue_6">Blue\n6</string>
+    <string name="Violet_7">Violet\n7</string>
+    <string name="Grey_8">Grey\n8</string>
+    <string name="White_9">White\n9</string>
+
+    <string name="Black_1">Black\n1</string>
+    <string name="Brown_10">Brown\n10</string>
+    <string name="Red_100">Red\n100</string>
+    <string name="Orange_1k">Orange\n1k</string>
+    <string name="Yellow_10k">Yellow\n10k</string>
+    <string name="Green_100k">Green\n100k</string>
+    <string name="Blue_1M">Blue\n1M</string>
+    <string name="Violet_10M">Violet\n10M</string>
+    <string name="Grey_100M">Grey\n100M</string>
+    <string name="White_1G">White\n1G</string>
+    <string name="Gold_01">Grey\n0.1</string>
+    <string name="Silver_001">White\n0.01</string>
+
+    <string name="Black_temp">Black\n250ppm/°C</string>
+    <string name="Brown_temp">Brown\n100ppm/°C</string>
+    <string name="Red_temp">Red\n50ppm/°C</string>
+    <string name="Orange_temp">Orange\n15ppm/°C</string>
+    <string name="Yellow_temp">Yellow\n25ppm/°C</string>
+    <string name="Green_temp">Green\n20ppm/°C</string>
+    <string name="Blue_temp">Blue\n10ppm/°C</string>
+    <string name="Violet_temp">Violet\n5ppm/°C</string>
+    <string name="Grey_temp">Grey\n1ppm/°C</string>
+
+    <string name="Brown_tol">Brown\n±1%</string>
+    <string name="Red_tol">Red\n±2%</string>
+    <string name="Orange_tol">Orange\n±0.05%</string>
+    <string name="Yellow_tol">Yellow\n±0.02%</string>
+    <string name="Green_tol">Green\n±0.5%</string>
+    <string name="Blue_tol">Blue\n±0.25%</string>
+    <string name="Violet_tol">Violet\n±0.1%</string>
+    <string name="Grey_tol">Grey\n±0.01%</string>
+    <string name="Gold_tol">Gold\n±5%</string>
+    <string name="Silver_tol">Silver\n±10%</string>
+    <string name="None_tol">None\n±20%</string>
+
+    /* ------------------------------ Home strings ----------------------------- */
+    <string name="home_complex">Complex</string>
+    <string name="home_algebra">Vectors</string>
+    <string name="home_matrix">Matrices</string>
+    <string name="home_matrix_complex">Complex matrices</string>
+    <string name="home_digital">Converter</string>
+    <string name="home_resistor">Resistors</string>
+    <string name="home_randomizer">Randomizer</string>
+    <string name="home_series">Number series</string>
+    <string name="home_series2">Series</string>
+    <string name="home_boolean">Boolean algebra</string>
+    <string name="home_boolean2">Boolean</string>
+
+    <string name="desc_complex">Complex numbers and impedance calculator.</string>
+    <string name="desc_algebra">Calculations with vectors, planes, lines and points, such as addition, subtraction, angle and distance.</string>
+    <string name="desc_matrix">Matrix calculations such as addition, subtraction, multiplication, determinant, and inverse.</string>
+    <string name="desc_digital">Binary, decimal, octal and hexadecimal converter. Also generates binary complements.</string>
+    <string name="desc_resistor">Calculates from colors to resistor value and from value to colors. Also supports SMD resistors.</string>
+    <string name="desc_mmc">Greatest common factor and least common multiple.</string>
+    <string name="desc_rand">Group randomizer.</string>
+    <string name="desc_series">Number series calculator and expression finder.</string>
+    <string name="desc_boolean">Boolean algebra expression simplifying calculator.</string>
+
+    <string name="category_algebra">Algebra</string>
+    <string name="category_math">Mathematics</string>
+    <string name="category_electronics">Electronics</string>
+    <string name="category_converters">Converters</string>
+    <string name="category_miscellaneous">Miscellaneous</string>
+
+    /* ------------------------------ Other strings ----------------------------- */
+    <string name="Syntax_Error">Syntax Error</string>
+    <string name="Radians">Rad</string>
+    <string name="Degrees">Deg</string>
+    <string name="Ans">Ans</string>
+    <string name="RAD">RAD</string>
+    <string name="DEG">DEG</string>
+    <string name="binary">Binary</string>
+    <string name="decimal">Decimal</string>
+    <string name="octal">Octal</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="error_opening_uri_1">Sharing failed, please check your client</string>
+    <string name="settings">Settings</string>
+    <string name="numeric_base_converter">Numeric base converter</string>
+    <string name="copied">Copied</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="resistor_color_code">Resistor color code</string>
+    <string name="mCopy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="home">Home</string>
+    <string name="complex_calculator">Complex Calculator</string>
+    <string name="vector_calculator">Vector calculator</string>
+    <string name="others">Others</string>
+    <string name="report_a_bug">Report a bug</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="result">Result</string>
+    <string name="impedance_input">Impedance input</string>
+    <string name="complex_numbers">Complex numbers</string>
+    <string name="polar_form_input">Polar form input</string>
+    <string name="series_impedance">Series impedance</string>
+    <string name="parallel_impedance">Parallel impedance</string>
+    <string name="prefixes">Prefixes</string>
+    <string name="scientific_notation_input">Scientific notation input</string>
+    <string name="complex_number_calculations">Complex number calculations</string>
+    <string name="precedenceWord">Precedence</string>
+    <string name="more_result_formats">More result formats</string>
+    <string name="_4_bands">4 Bands</string>
+    <string name="_5_bands">5 Bands</string>
+    <string name="_6_bands">6 Bands</string>
+    <string name="_1st_band">1st band</string>
+    <string name="_2nd_band">2nd band</string>
+    <string name="multiplier">Multiplier</string>
+    <string name="tolerance">Tolerance</string>
+    <string name="theme">Theme</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="light_mode">Light mode</string>
+    <string name="credits">Credits</string>
+    <string name="no_one_clicks_me">No one clicks me :(</string>
+    <string name="clear">Clear</string>
+    <string name="by_exoticnumbers">By ExoticNumbers</string>
+    <string name="result_formats">Results</string>
+    <string name="scientific_notation">Scientific notation</string>
+    <string name="engineer_notation">Engineering notation</string>
+    <string name="polar_form">Polar form</string>
+    <string name="trigonometric_form">Trigonometric form</string>
+    <string name="exponential_form">Exponential form</string>
+    <string name="big_decimal_number">Decimal number</string>
+    <string name="cap_desc">Cap(capacitance, frequency or angular frequency)</string>
+    <string name="ind_desc">Ind(inductance, frequency or angular frequency)</string>
+    <string name="_3rd_band">3rd band</string>
+    <string name="temperature_coefficient">Temperature\ncoefficient</string>
+    <string name="insert_expression_to_the_editor">Insert expression to the editor?</string>
+    <string name="delete">Delete</string>
+    <string name="copy_expression">Copy expression</string>
+    <string name="copy_result">Copy result</string>
+    <string name="enjoying_our_app">Enjoying our app?</string>
+    <string name="if_so_why_don_t_you_take_a_moment_to_rate_us">If so, why don\'t you take a moment to rate us?</string>
+    <string name="ask_me_later">Ask me later</string>
+    <string name="never_ask_me_again">Never ask me again</string>
+    <string name="rate_now">Rate now!</string>
+    <string name="navigation_drawer_open" translatable="false">open</string>
+    <string name="navigation_drawer_close" translatable="false">close</string>
+    <string name="share_app">Share app</string>
+    <string name="_1_s_complement">1\'s\ncomplement</string>
+    <string name="_2_s_complement">2\'s\ncomplement</string>
+    <string name="input_requires">Input requires</string>
+    <string name="select_1_vector">Select 1 vector</string>
+    <string name="select_2_vector">Select 2 vectors</string>
+    <string name="select_point_line">Select a point and a line</string>
+    <string name="select_2_lines">Select 2 lines</string>
+    <string name="select_2_points">Select 2 points</string>
+    <string name="select_point_plane">Select a point and a plane</string>
+    <string name="select_2_planes">Select 2 planes</string>
+    <string name="select_line_plane">Select a line and a plane</string>
+    <string name="save">Save</string>
+    <string name="vector">Vector</string>
+    <string name="point">Point</string>
+    <string name="line">Line</string>
+    <string name="plane">Plane</string>
+    <string name="name"><i>NAME</i></string>
+    <string name="saved">Saved</string>
+    <string name="something_went_wrong">Something went wrong :(</string>
+    <string name="edit">Edit</string>
+    <string name="generate_new_vector">Generate new vector</string>
+    <string name="line_1_point">Line 1 point</string>
+    <string name="line_2_point">Line 2 point</string>
+    <string name="additional_points">Set the points values</string>
+    <string name="planes_intersect">The planes intersect</string>
+    <string name="cant_make_vector">Can\'t generate a vector of this</string>
+    <string name="cant_make_matrix">Can\'t generate a matrix of this</string>
+    <string name="matrix_calculator">Matrix calculator</string>
+    <string name="generate_new_matrix">Generate new matrix</string>
+    <string name="select_1_matrix">Select 1 matrix</string>
+    <string name="select_2_matrix">Select 2 matrices</string>
+    <string name="rows">Rows</string>
+    <string name="columns">Columns</string>
+    <string name="matrix">Matrix</string>
+    <string name="see_edit">See/Edit</string>
+    <string name="see_result">Click to see the result</string>
+    <string name="number">Number</string>
+    <string name="define_scalar">Define the scalar value</string>
+    <string name="scalar_error">The scalar must be >= 0</string>
+    <string name="matrix_error">The matrices have different dimensions</string>
+    <string name="determinant_error">Determinant of given matrix is undefined</string>
+    <string name="inverse_error">The selected matrix is not invertible</string>
+    <string name="no_elements_created">No elements created yet\nPress the \'+\' button to created one</string>
+    <string name="search">Search</string>
+    <string name="favorites">Favorites</string>
+    <string name="code">CODE</string>
+    <string name="resistor_not_found">Resistor not found</string>
+    <string name="invalid_code">Invalid code</string>
+    <string name="error">Error</string>
+    <string name="gcf">GCF</string>
+    <string name="greatest_common_factor">Greatest Common Factor</string>
+    <string name="values">Values</string>
+    <string name="lcm">LCM</string>
+    <string name="least_common_multiple">Least Common Multiple</string>
+    <string name="mmc_mdc">GCF / LCM</string>
+    <string name="add_value">Add value</string>
+    <string name="hints">Hints</string>
+    <string name="generate">Generate</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="count">Count</string>
+    <string name="unique">Unique</string>
+    <string name="separator">Separator</string>
+    <string name="groups">Groups</string>
+    <string name="group">Group</string>
+    <string name="calculate">Calculate</string>
+    <string name="geometric_sequence">The sequence is geometric with ratio </string>
+    <string name="arithmetic_sequence">The sequence is arithmetic with ratio </string>
+    <string name="constant_sequence">The sequence is constant</string>
+    <string name="ascending_sequence">The sequence is increasing</string>
+    <string name="descending_sequence">The sequence is descending</string>
+    <string name="oscillating_sequence">The sequence is oscillating</string>
+    <string name="language">Language</string>
+    <string name="calculator">Calculator</string>
+    <string name="admittance">Admittance</string>
+    <string name="resistor_help">In order to modify the resistor value, you have two options available. Firstly, you can directly enter the desired value into the corresponding field. Alternatively, you can opt to adjust the value by altering the colors of the bands on the resistor. The choice is yours!</string>
+    <string name="digital_help">Please choose the number base for the entry. The remaining fields will automatically convert accordingly.</string>
+    <string name="digital_help2">In the case of binary numbers representing integers, you can also  check the 1\'s complement and 2\'s complement representations.</string>
+    <string name="help_add_element">To begin, you will need to press this button to add the necessary elements. Next, you should select the specific elements that you wish to utilize for the calculation.</string>
+    <string name="help_choose_element">At this point, all that remains is to choose the desired calculation to perform.</string>
+    <string name="help_mmc_mdc">To begin, you will need to press this button to add the necessary elements. Next, the calculator automatically calculates the GCF and LCM values.</string>
+    <string name="help_randomizer">Select the randomization feature you want here.</string>
+    <string name="help_add_element_randomizer">To begin, you will need to press this button to add the elements you want to randomize.</string>
+    <string name="help_group_randomizer">At this point, all that remains is to choose the desired number of random groups to be generated and press \'Generate\'</string>
+    <string name="help_number_randomizer_1">To begin, enter the start of the randomization range.</string>
+    <string name="help_number_randomizer_2">Enter the end of the randomization range.</string>
+    <string name="help_number_randomizer_3">Here you can select the amount of numbers to be generated.</string>
+    <string name="help_number_randomizer_4">If you want to generate numbers without repetition, activate this option.</string>
+    <string name="help_number_randomizer_5">Here you can change the separator text between the numbers.</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="this_is_a_premium_feature">This is a premium feature</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="scalar_not_integer">The scalar must be an integer</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="fill_with">Fill with:</string>
+    <string name="home_karnaugh">K-Map</string>
+    <string name="karnaugh_help">Modify values by selecting positions on the map. The simplified expression will be displayed here.</string>
+    <string name="home_network">IP Calculator</string>
+    <string name="desc_network">IP network calculator, mask ip, telecommunications, address</string>
+    <string name="desc_karnaugh">Karnaugh map solver</string>
+    <string name="ipv4_address">IPv4 Address</string>
+    <string name="x_x_x_x_or_x_x_x_x_xx">x.x.x.x</string>
+    <string name="subnet_mask">Subnet Mask</string>
+    <string name="network_address">Network Address</string>
+    <string name="usable_host_ip_range">Usable Host IP Range</string>
+    <string name="broadcast_address">Broadcast Address</string>
+    <string name="total_number_of_hosts">Total Number of Hosts</string>
+    <string name="number_of_usable_hosts">Number of Usable Hosts</string>
+    <string name="enter_ip">Enter the IP address in the format x.x.x.x</string>
+    <string name="enter_mask">Select the subnet mask</string>
+    <string name="usable_range_none">There is no usable IP address range</string>
+    <string name="distribution">Distributions</string>
+    <string name="average">Average</string>
+    <string name="deviation">Deviation</string>
+    <string name="scale">Scale</string>
+    <string name="group_randomizer">Group randomizer</string>
+    <string name="desc_distribution">Number generator, Uniform, Gaussian, Rayleigh, Rician.</string>
+    <string name="help_distribution">Select the distribution and generate random numbers. The result will be shown here.</string>
+    <string name="partial_fractions">Partial fractions</string>
+    <string name="desc_partial_fractions">Partial Fraction Calculator</string>
+    <string name="queue">Queueing theory</string>
+    <string name="description_queue">Queueing theory calculator</string>
+    <string name="queue_2">Queues</string>
+    <string name="divide">Divide subnet</string>
+    <string name="empty_queue_prob">Prob. of empty queue - Po</string>
+    <string name="blocking_prob">Blocking probability - Pb</string>
+    <string name="pk_prob">Prob. of X elements - Px</string>
+    <string name="avg_elements_queue">Avg. items in queue - E(w)</string>
+    <string name="avg_elements_system">Avg. items in system - E(q)</string>
+    <string name="avg_elements_servers">Avg. items in servers - E(S)</string>
+    <string name="avg_waiting_time">Avg. waiting time - E(tw)</string>
+    <string name="avg_system_time">Avg. system time - E(tq)</string>
+    <string name="avg_service_time">Avg. service time - E(ts)</string>
+    <string name="queue_type">Queue - Kendall\'s notation</string>
+    <string name="arrival_rate">Arrival rate - (λ)</string>
+    <string name="departure_rate">Departure rate - (µ)</string>
+    <string name="number_servers">Number of servers - (m)</string>
+    <string name="x_elements">Elements in queue - (x)</string>
+    <string name="number_of_elements_in_queue">Number of elements in the queue - (J)</string>
+    <string name="total_elements_in_queue">Total elements in the queue</string>
+    <string name="population_size">Population size</string>
+    <string name="access_denied">Access Denied</string>
+    <string name="paid_users_only">This feature is only available for paid users.</string>
+    <string name="upgrade">Upgrade now!</string>
+    <string name="cancel">Cancel</string>
+    <string name="digital_communication">Digital communication</string>
+    <string name="union_bound">Union bound</string>
+    <string name="origin_distance">Distances to origin</string>
+    <string name="energies">Energies</string>
+    <string name="distance_between_symbols">Distance between symbols</string>
+    <string name="noise_power">Noise power [W/Hz]</string>
+    <string name="symbols_probabilities">Symbol probabilities</string>
+    <string name="symbol">Symbol</string>
+    <string name="to_word">to</string>
+
+
+</resources>

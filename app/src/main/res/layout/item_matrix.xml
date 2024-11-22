@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:hint="0"
+        android:imeOptions="actionNext"
+        android:textAlignment="center"
+        android:longClickable="false"
+        android:textColor="@color/text_color"
+        android:inputType="numberDecimal|numberSigned"
+        android:background="@drawable/ripple_effect"
+        android:importantForAutofill="no"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText,LabelFor" />
+</LinearLayout>

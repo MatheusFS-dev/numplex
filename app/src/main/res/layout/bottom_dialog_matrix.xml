@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearCalcHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/bg_bottom_dialog"
+    android:backgroundTint="@color/secondary_background_color"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_effect_blue_2nd_version"
+        android:text="@string/save"
+        android:fontFamily="@font/numplex_font"
+        android:textAllCaps="false"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/ic_baseline_save_24"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp" />
+
+    <!-- New Rows -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_rows"
+            android:scaleType="fitCenter"
+            app:tint="@color/numplex_blue"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="5dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:gravity="center|start"
+            android:text="@string/rows"
+            android:fontFamily="@font/numplex_font"
+            android:textColor="@color/numplex_blue"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/minusRow"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_left"
+            android:src="@drawable/ic_minus"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:fontFamily="@font/numplex_font"
+            tools:ignore="ContentDescription"
+            android:backgroundTint="@color/numplex_blue_light2" />
+
+        <TextView
+            android:id="@+id/rows"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2"
+            android:background="@color/numplex_blue_light"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/numplex_blue"
+            android:textSize="25sp"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:id="@+id/plusRow"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_bottom_right"
+            android:src="@drawable/ic_plus"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:fontFamily="@font/numplex_font"
+            android:backgroundTint="@color/numplex_blue_light2"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <!-- New Columns -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_columns"
+            android:scaleType="fitCenter"
+            app:tint="@color/numplex_blue"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="5dp"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:gravity="center|start"
+            android:text="@string/columns"
+            android:fontFamily="@font/numplex_font"
+            android:textColor="@color/numplex_blue"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/minusCol"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_left"
+            android:src="@drawable/ic_minus"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:fontFamily="@font/numplex_font"
+            tools:ignore="ContentDescription"
+            android:backgroundTint="@color/numplex_blue_light2" />
+
+        <TextView
+            android:id="@+id/columns"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@color/numplex_blue_light"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/numplex_blue"
+            android:textSize="25sp"
+            android:layout_gravity="center" />
+
+        <ImageButton
+            android:id="@+id/plusCol"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_bottom_right"
+            android:src="@drawable/ic_plus"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:fontFamily="@font/numplex_font"
+            android:backgroundTint="@color/numplex_blue_light2"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/matrix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/ripple_effect"
+        android:animateLayoutChanges="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/matrixName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/name"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@id/vectorX"
+            android:textColorHint="#7FD4E3"
+            android:textColor="@color/numplex_blue"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:autofillHints="name"
+            android:inputType="text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/matrixGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:stretchMode="columnWidth"
+            android:layout_gravity="center"
+            android:gravity="fill_horizontal"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

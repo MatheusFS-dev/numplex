@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    app:contentScaleClosed="1.0"
+    app:contentScaleOpen="0.9"
+    app:marginFactor="0.7"
+    tools:context=".home.HomeActivity">
+
+    <!-- This part is the menu -->
+    <include layout="@layout/layout_drawer" />
+
+    <!-- Content here -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        android:clipChildren="false"
+        android:tag="content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_toolbar"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/text_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:searchIcon="@drawable/ic_baseline_search_24"
+                    app:defaultQueryHint="@string/search"
+                    app:iconifiedByDefault="false" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/favoritesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:animateLayoutChanges="true"
+            android:focusable="false"
+            android:fontFamily="@font/numplex_font"
+            android:text="@string/favorites"
+            android:textColor="@color/numplex_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favorites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/favoritesText" />
+
+        <FrameLayout
+            android:id="@+id/deleteArea"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingBottom="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_circle_red"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/tabBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animDelete"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                app:lottie_colorFilter="@color/white"
+                app:lottie_autoPlay="false"
+                app:lottie_rawRes="@raw/trash"
+                app:lottie_speed="1.0" >
+            </com.airbnb.lottie.LottieAnimationView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/listParent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/favorites">
+
+            <ListView
+                android:id="@+id/listHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:paddingBottom="100dp"
+                android:clipToPadding="false"
+                android:animateLayoutChanges="true"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp"
+                android:listSelector="@android:color/transparent"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/tabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:mbn_backgroundBottomColor="@color/main_color"
+            app:mbn_circleColor="@color/main_color"
+            app:mbn_countBackgroundColor="@color/main_color"
+            app:mbn_countTextColor="@color/main_color"
+            app:mbn_defaultIconColor="@color/text_color"
+            app:mbn_selectedIconColor="@color/numplex_blue"
+            app:mbn_shadowColor="@color/main_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

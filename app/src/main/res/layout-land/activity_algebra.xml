@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    app:contentScaleClosed="1.0"
+    app:contentScaleOpen="0.9"
+    app:marginFactor="0.7"
+    tools:context=".algebra.AlgebraActivity">
+
+    <!-- This part is the menu -->
+    <include layout="@layout/layout_drawer" />
+
+    <!-- Content here -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background_color"
+        android:orientation="vertical"
+        android:tag="content">
+
+        <!-- Toolbar -->
+        <include layout="@layout/layout_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/containerSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ripple_effect_black"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/algebraSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:popupBackground="@drawable/ripple_effect_black"
+                android:spinnerMode="dropdown" />
+
+            <!-- Additional points -->
+            <LinearLayout
+                android:id="@+id/point1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect_black"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="@string/line_1_point"
+                    android:textAllCaps="true"
+                    android:textColor="@color/numplex_blue"
+                    android:textColorHint="#7FD4E3"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text="("
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/point1X"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/grey"
+                            android:fontFamily="@font/numplex_font"
+                            android:hint="0"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/point1Y"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/grey"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text=";"
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/point1Y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/grey"
+                            android:fontFamily="@font/numplex_font"
+                            android:hint="0"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/point1Z"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/grey"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text=";"
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/point1Z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/grey"
+                            android:fontFamily="@font/numplex_font"
+                            android:hint="0"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/point2X"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/grey"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text=")"
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Additional points -->
+            <LinearLayout
+                android:id="@+id/point2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ripple_effect_black"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="@string/line_2_point"
+                    android:textAllCaps="true"
+                    android:textColor="@color/numplex_blue"
+                    android:textColorHint="#7FD4E3"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text="("
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/point2X"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/grey"
+                            android:fontFamily="@font/numplex_font"
+                            android:hint="0"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/point2Y"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/grey"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text=";"
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/point2Y"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/grey"
+                            android:fontFamily="@font/numplex_font"
+                            android:hint="0"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/point2Z"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/grey"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text=";"
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+
+                        <EditText
+                            android:id="@+id/point2Z"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="@color/grey"
+                            android:fontFamily="@font/numplex_font"
+                            android:hint="0"
+                            android:imeOptions="actionDone"
+                            android:importantForAutofill="no"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLines="1"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/grey"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,LabelFor,RtlSymmetry" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:focusable="false"
+                            android:fontFamily="@font/numplex_font"
+                            android:gravity="center"
+                            android:text=")"
+                            android:textColor="@color/text_color"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText,RtlSymmetry" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/resultContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ripple_effect_black">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ripple_effect_black"
+                android:fontFamily="@font/numplex_font"
+                android:hint="@string/result"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:textColor="@color/text_color"
+                android:textSize="30sp"
+                tools:ignore="HardcodedText" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/hints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:animateLayoutChanges="true"
+            android:focusable="false"
+            android:fontFamily="@font/numplex_font"
+            android:hint="@string/hints"
+            android:padding="10dp"
+            android:textColor="@color/red"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <!-- This part is the list -->
+        <include layout="@layout/layout_list_flotting_button"
+            android:id="@+id/listMaster"/>
+
+    </LinearLayout>
+
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>
